@@ -7,7 +7,7 @@ import 'view/widget/intro_image_button_stack_widget.dart';
 import 'view/widget/intro_title_widget.dart';
 
 class IntroScreen extends StatefulWidget {
-  const IntroScreen({Key? key}) : super(key: key);
+  const IntroScreen({super.key});
 
   @override
   _IntroScreenState createState() => _IntroScreenState();

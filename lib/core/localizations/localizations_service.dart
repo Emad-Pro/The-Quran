@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:the_quran/core/bloc_cache/cache_service.dart';
 
 class LocalizationsService {
-  static Locale locale = Locale("en");
+  static Locale locale = const Locale("en");
   late Map<String, String> _localizedStrings;
 
   LocalizationsService();

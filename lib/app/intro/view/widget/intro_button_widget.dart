@@ -3,6 +3,7 @@ import 'package:the_quran/core/localizations/localizations_service.dart';
 
 import '../../../../core/const/colors.dart';
 import '../../../../core/responsive/responsive_text.dart';
+import '../../../main/view/main_screen.dart';
 
 class IntroButtonWidget extends StatelessWidget {
   const IntroButtonWidget({
@@ -17,7 +18,10 @@ class IntroButtonWidget extends StatelessWidget {
         fit: BoxFit.scaleDown,
         child: InkWell(
           borderRadius: BorderRadius.circular(20),
-          onTap: () {},
+          onTap: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) => const MainScreen()));
+          },
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 10),
             decoration: BoxDecoration(
@@ -29,7 +33,7 @@ class IntroButtonWidget extends StatelessWidget {
               style: TextStyle(
                   color: Theme.of(context).colorScheme.surface,
                   fontWeight: FontWeight.w600,
-                  fontSize: getResponsiveFontSize(context, fontSize: 20)),
+                  fontSize: getResponsiveFontSize(context, fontSize: 18)),
             )),
           ),
         ),
