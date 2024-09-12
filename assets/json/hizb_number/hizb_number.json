@@ -1,0 +1,304 @@
+{
+    "quran_hizb": [
+        {
+            "hizb_number": 1,
+            "name": "الحِزْبُ الأوَّل",
+            "translation": "The First Hizb"
+        },
+        {
+            "hizb_number": 2,
+            "name": "الحِزْبُ الثَّانِي",
+            "translation": "The Second Hizb"
+        },
+        {
+            "hizb_number": 3,
+            "name": "الحِزْبُ الثَّالِث",
+            "translation": "The Third Hizb"
+        },
+        {
+            "hizb_number": 4,
+            "name": "الحِزْبُ الرَّابِع",
+            "translation": "The Fourth Hizb"
+        },
+        {
+            "hizb_number": 5,
+            "name": "الحِزْبُ الخَامِس",
+            "translation": "The Fifth Hizb"
+        },
+        {
+            "hizb_number": 6,
+            "name": "الحِزْبُ السَّادِس",
+            "translation": "The Sixth Hizb"
+        },
+        {
+            "hizb_number": 7,
+            "name": "الحِزْبُ السَّابِع",
+            "translation": "The Seventh Hizb"
+        },
+        {
+            "hizb_number": 8,
+            "name": "الحِزْبُ الثَّامِن",
+            "translation": "The Eighth Hizb"
+        },
+        {
+            "hizb_number": 9,
+            "name": "الحِزْبُ التَّاسِع",
+            "translation": "The Ninth Hizb"
+        },
+        {
+            "hizb_number": 10,
+            "name": "الحِزْبُ العَاشِر",
+            "translation": "The Tenth Hizb"
+        },
+        {
+            "hizb_number": 11,
+            "name": "الحِزْبُ الحَادِي عَشَر",
+            "translation": "The Eleventh Hizb"
+        },
+        {
+            "hizb_number": 12,
+            "name": "الحِزْبُ الثَّانِي عَشَر",
+            "translation": "The Twelfth Hizb"
+        },
+        {
+            "hizb_number": 13,
+            "name": "الحِزْبُ الثَّالِثَ عَشَر",
+            "translation": "The Thirteenth Hizb"
+        },
+        {
+            "hizb_number": 14,
+            "name": "الحِزْبُ الرَّابِعَ عَشَر",
+            "translation": "The Fourteenth Hizb"
+        },
+        {
+            "hizb_number": 15,
+            "name": "الحِزْبُ الخَامِسَ عَشَر",
+            "translation": "The Fifteenth Hizb"
+        },
+        {
+            "hizb_number": 16,
+            "name": "الحِزْبُ السَّادِسَ عَشَر",
+            "translation": "The Sixteenth Hizb"
+        },
+        {
+            "hizb_number": 17,
+            "name": "الحِزْبُ السَّابِعَ عَشَر",
+            "translation": "The Seventeenth Hizb"
+        },
+        {
+            "hizb_number": 18,
+            "name": "الحِزْبُ الثَّامِنَ عَشَر",
+            "translation": "The Eighteenth Hizb"
+        },
+        {
+            "hizb_number": 19,
+            "name": "الحِزْبُ التَّاسِعَ عَشَر",
+            "translation": "The Nineteenth Hizb"
+        },
+        {
+            "hizb_number": 20,
+            "name": "الحِزْبُ العِشْرُون",
+            "translation": "The Twentieth Hizb"
+        },
+        {
+            "hizb_number": 21,
+            "name": "الحِزْبُ الحَادِي وَالعِشْرُون",
+            "translation": "The Twenty-First Hizb"
+        },
+        {
+            "hizb_number": 22,
+            "name": "الحِزْبُ الثَّانِي وَالعِشْرُون",
+            "translation": "The Twenty-Second Hizb"
+        },
+        {
+            "hizb_number": 23,
+            "name": "الحِزْبُ الثَّالِثُ وَالعِشْرُون",
+            "translation": "The Twenty-Third Hizb"
+        },
+        {
+            "hizb_number": 24,
+            "name": "الحِزْبُ الرَّابِعُ وَالعِشْرُون",
+            "translation": "The Twenty-Fourth Hizb"
+        },
+        {
+            "hizb_number": 25,
+            "name": "الحِزْبُ الخَامِسُ وَالعِشْرُون",
+            "translation": "The Twenty-Fifth Hizb"
+        },
+        {
+            "hizb_number": 26,
+            "name": "الحِزْبُ السَّادِسُ وَالعِشْرُون",
+            "translation": "The Twenty-Sixth Hizb"
+        },
+        {
+            "hizb_number": 27,
+            "name": "الحِزْبُ السَّابِعُ وَالعِشْرُون",
+            "translation": "The Twenty-Seventh Hizb"
+        },
+        {
+            "hizb_number": 28,
+            "name": "الحِزْبُ الثَّامِنُ وَالعِشْرُون",
+            "translation": "The Twenty-Eighth Hizb"
+        },
+        {
+            "hizb_number": 29,
+            "name": "الحِزْبُ التَّاسِعُ وَالعِشْرُون",
+            "translation": "The Twenty-Ninth Hizb"
+        },
+        {
+            "hizb_number": 30,
+            "name": "الحِزْبُ الثَّلَاثُون",
+            "translation": "The Thirtieth Hizb"
+        },
+        {
+            "hizb_number": 31,
+            "name": "الحِزْبُ الحَادِي وَالثَّلَاثُون",
+            "translation": "The Thirty-First Hizb"
+        },
+        {
+            "hizb_number": 32,
+            "name": "الحِزْبُ الثَّانِي وَالثَّلَاثُون",
+            "translation": "The Thirty-Second Hizb"
+        },
+        {
+            "hizb_number": 33,
+            "name": "الحِزْبُ الثَّالِثُ وَالثَّلَاثُون",
+            "translation": "The Thirty-Third Hizb"
+        },
+        {
+            "hizb_number": 34,
+            "name": "الحِزْبُ الرَّابِعُ وَالثَّلَاثُون",
+            "translation": "The Thirty-Fourth Hizb"
+        },
+        {
+            "hizb_number": 35,
+            "name": "الحِزْبُ الخَامِسُ وَالثَّلَاثُون",
+            "translation": "The Thirty-Fifth Hizb"
+        },
+        {
+            "hizb_number": 36,
+            "name": "الحِزْبُ السَّادِسُ وَالثَّلَاثُون",
+            "translation": "The Thirty-Sixth Hizb"
+        },
+        {
+            "hizb_number": 37,
+            "name": "الحِزْبُ السَّابِعُ وَالثَّلَاثُون",
+            "translation": "The Thirty-Seventh Hizb"
+        },
+        {
+            "hizb_number": 38,
+            "name": "الحِزْبُ الثَّامِنُ وَالثَّلَاثُون",
+            "translation": "The Thirty-Eighth Hizb"
+        },
+        {
+            "hizb_number": 39,
+            "name": "الحِزْبُ التَّاسِعُ وَالثَّلَاثُون",
+            "translation": "The Thirty-Ninth Hizb"
+        },
+        {
+            "hizb_number": 40,
+            "name": "الحِزْبُ الأَرْبَعُون",
+            "translation": "The Fortieth Hizb"
+        },
+        {
+            "hizb_number": 41,
+            "name": "الحِزْبُ الحَادِي وَالأَرْبَعُون",
+            "translation": "The Forty-First Hizb"
+        },
+        {
+            "hizb_number": 42,
+            "name": "الحِزْبُ الثَّانِي وَالأَرْبَعُون",
+            "translation": "The Forty-Second Hizb"
+        },
+        {
+            "hizb_number": 43,
+            "name": "الحِزْبُ الثَّالِثُ وَالأَرْبَعُون",
+            "translation": "The Forty-Third Hizb"
+        },
+        {
+            "hizb_number": 44,
+            "name": "الحِزْبُ الرَّابِعُ وَالأَرْبَعُون",
+            "translation": "The Forty-Fourth Hizb"
+        },
+        {
+            "hizb_number": 45,
+            "name": "الحِزْبُ الخَامِسُ وَالأَرْبَعُون",
+            "translation": "The Forty-Fifth Hizb"
+        },
+        {
+            "hizb_number": 46,
+            "name": "الحِزْبُ السَّادِسُ وَالأَرْبَعُون",
+            "translation": "The Forty-Sixth Hizb"
+        },
+        {
+            "hizb_number": 47,
+            "name": "الحِزْبُ السَّابِعُ وَالأَرْبَعُون",
+            "translation": "The Forty-Seventh Hizb"
+        },
+        {
+            "hizb_number": 48,
+            "name": "الحِزْبُ الثَّامِنُ وَالأَرْبَعُون",
+            "translation": "The Forty-Eighth Hizb"
+        },
+        {
+            "hizb_number": 49,
+            "name": "الحِزْبُ التَّاسِعُ وَالأَرْبَعُون",
+            "translation": "The Forty-Ninth Hizb"
+        },
+        {
+            "hizb_number": 50,
+            "name": "الحِزْبُ الخَمْسُون",
+            "translation": "The Fiftieth Hizb"
+        },
+        {
+            "hizb_number": 51,
+            "name": "الحِزْبُ الحَادِي وَالخَمْسُون",
+            "translation": "The Fifty-First Hizb"
+        },
+        {
+            "hizb_number": 52,
+            "name": "الحِزْبُ الثَّانِي وَالخَمْسُون",
+            "translation": "The Fifty-Second Hizb"
+        },
+        {
+            "hizb_number": 53,
+            "name": "الحِزْبُ الثَّالِثُ وَالخَمْسُون",
+            "translation": "The Fifty-Third Hizb"
+        },
+        {
+            "hizb_number": 54,
+            "name": "الحِزْبُ الرَّابِعُ وَالخَمْسُون",
+            "translation": "The Fifty-Fourth Hizb"
+        },
+        {
+            "hizb_number": 55,
+            "name": "الحِزْبُ الخَامِسُ وَالخَمْسُون",
+            "translation": "The Fifty-Fifth Hizb"
+        },
+        {
+            "hizb_number": 56,
+            "name": "الحِزْبُ السَّادِسُ وَالخَمْسُون",
+            "translation": "The Fifty-Sixth Hizb"
+        },
+        {
+            "hizb_number": 57,
+            "name": "الحِزْبُ السَّابِعُ وَالخَمْسُون",
+            "translation": "The Fifty-Seventh Hizb"
+        },
+        {
+            "hizb_number": 58,
+            "name": "الحِزْبُ الثَّامِنُ وَالخَمْسُون",
+            "translation": "The Fifty-Eighth Hizb"
+        },
+        {
+            "hizb_number": 59,
+            "name": "الحِزْبُ التَّاسِعُ وَالخَمْسُون",
+            "translation": "The Fifty-Ninth Hizb"
+        },
+        {
+            "hizb_number": 60,
+            "name": "الحِزْبُ السِّتُون",
+            "translation": "The Sixtieth Hizb"
+        }
+    ]
+}

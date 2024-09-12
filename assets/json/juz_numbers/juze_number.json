@@ -1,0 +1,154 @@
+{
+  "quran_juze": [
+    {
+      "juze_number": 1,
+      "name": "الجزءالأوَّل",
+      "translation": "The First Juz"
+    },
+    {
+      "juze_number": 2,
+      "name": "الجزءالثَّاني",
+      "translation": "The Second Juz"
+    },
+    {
+      "juze_number": 3,
+      "name": "الجزءالثَّالث",
+      "translation": "The Third Juz"
+    },
+    {
+      "juze_number": 4,
+      "name": "الجزءالرَّابع",
+      "translation": "The Fourth Juz"
+    },
+    {
+      "juze_number": 5,
+      "name": "الجزءالخَامِس",
+      "translation": "The Fifth Juz"
+    },
+    {
+      "juze_number": 6,
+      "name": "الجزءالسَّادِس",
+      "translation": "The Sixth Juz"
+    },
+    {
+      "juze_number": 7,
+      "name": "الجزءالسَّابِع",
+      "translation": "The Seventh Juz"
+    },
+    {
+      "juze_number": 8,
+      "name": "الجزءالثَّامِن",
+      "translation": "The Eighth Juz"
+    },
+    {
+      "juze_number": 9,
+      "name": "الجزءالتَّاسِع",
+      "translation": "The Ninth Juz"
+    },
+    {
+      "juze_number": 10,
+      "name": "الجزءالعَاشِر",
+      "translation": "The Tenth Juz"
+    },
+    {
+      "juze_number": 11,
+      "name": "الجزءالحَادِي عَشَر",
+      "translation": "The Eleventh Juz"
+    },
+    {
+      "juze_number": 12,
+      "name": "الجزءالثَّانِي عَشَر",
+      "translation": "The Twelfth Juz"
+    },
+    {
+      "juze_number": 13,
+      "name": "الجزءالثَّالِثَ عَشَر",
+      "translation": "The Thirteenth Juz"
+    },
+    {
+      "juze_number": 14,
+      "name": "الجزءالرَّابِعَ عَشَر",
+      "translation": "The Fourteenth Juz"
+    },
+    {
+      "juze_number": 15,
+      "name": "الجزءالخَامِسَ عَشَر",
+      "translation": "The Fifteenth Juz"
+    },
+    {
+      "juze_number": 16,
+      "name": "الجزءالسَّادِسَ عَشَر",
+      "translation": "The Sixteenth Juz"
+    },
+    {
+      "juze_number": 17,
+      "name": "الجزءالسَّابِعَ عَشَر",
+      "translation": "The Seventeenth Juz"
+    },
+    {
+      "juze_number": 18,
+      "name": "الجزءالثَّامِنَ عَشَر",
+      "translation": "The Eighteenth Juz"
+    },
+    {
+      "juze_number": 19,
+      "name": "الجزءالتَّاسِعَ عَشَر",
+      "translation": "The Nineteenth Juz"
+    },
+    {
+      "juze_number": 20,
+      "name": "الجزءالعِشْرُون",
+      "translation": "The Twentieth Juz"
+    },
+    {
+      "juze_number": 21,
+      "name": "الجزءالحَادِي وَالعِشْرُون",
+      "translation": "The Twenty-First Juz"
+    },
+    {
+      "juze_number": 22,
+      "name": "الجزءالثَّانِي وَالعِشْرُون",
+      "translation": "The Twenty-Second Juz"
+    },
+    {
+      "juze_number": 23,
+      "name": "الجزءالثَّالِثُ وَالعِشْرُون",
+      "translation": "The Twenty-Third Juz"
+    },
+    {
+      "juze_number": 24,
+      "name": "الجزءالرَّابِعُ وَالعِشْرُون",
+      "translation": "The Twenty-Fourth Juz"
+    },
+    {
+      "juze_number": 25,
+      "name": "الجزءالخَامِسُ وَالعِشْرُون",
+      "translation": "The Twenty-Fifth Juz"
+    },
+    {
+      "juze_number": 26,
+      "name": "الجزءالسَّادِسُ وَالعِشْرُون",
+      "translation": "The Twenty-Sixth Juz"
+    },
+    {
+      "juze_number": 27,
+      "name": "الجزءالسَّابِعُ وَالعِشْرُون",
+      "translation": "The Twenty-Seventh Juz"
+    },
+    {
+      "juze_number": 28,
+      "name": "الجزءالثَّامِنُ وَالعِشْرُون",
+      "translation": "The Twenty-Eighth Juz"
+    },
+    {
+      "juze_number": 29,
+      "name": "الجزءالتَّاسِعُ وَالعِشْرُون",
+      "translation": "The Twenty-Ninth Juz"
+    },
+    {
+      "juze_number": 30,
+      "name": "الجزءالثَّلَاثُون",
+      "translation": "The Thirtieth Juz"
+    }
+  ]
+}

@@ -12,6 +12,7 @@ import 'package:the_quran/core/theme/cubit/theme_cubit.dart';
 import 'package:the_quran/core/theme/service/theme_service.dart';
 
 import 'app/intro/intro_screen.dart';
+import 'app/quran_page/data/quran_page_repo/quran_page_repo.dart';
 import 'core/get_it/service_locator.dart';
 import 'core/localizations/localizations_service.dart';
 
@@ -23,6 +24,7 @@ void main() async {
         : await getApplicationDocumentsDirectory(),
   );
   Bloc.observer = MyBlocObserver();
+  await QuranPageRepo().loadQuranData();
   ServiceLocator().init();
   runApp(DevicePreview(builder: (context) => const MyApp()));
 }

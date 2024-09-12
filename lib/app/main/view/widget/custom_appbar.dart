@@ -33,8 +33,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                         ? ColorsConst.pruble
                         : Colors.white,
                 fontFamily: LocalizationsService.locale.languageCode == 'ar'
-                    ? "amiri"
-                    : "poppins",
+                    ? "quran"
+                    : "quran",
                 fontSize: getResponsiveFontSize(context, fontSize: 20),
                 fontWeight: FontWeight.bold),
           ),
