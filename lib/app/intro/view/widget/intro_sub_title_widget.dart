@@ -5,7 +5,7 @@ import '../../../../core/localizations/localizations_service.dart';
 import '../../../../core/responsive/responsive_text.dart';
 
 class IntroSubTitleWidget extends StatelessWidget {
-  const IntroSubTitleWidget({Key? key}) : super(key: key);
+  const IntroSubTitleWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class IntroSubTitleWidget extends StatelessWidget {
         textAlign: TextAlign.center,
         style: TextStyle(
             color: ColorsConst.gray,
-            fontSize: getResponsiveFontSize(context, fontSize: 20),
+            fontSize: getResponsiveFontSize(context, fontSize: 18),
             fontFamily: LocalizationsService.locale.languageCode == 'ar'
                 ? "amiri"
                 : "poppins"),

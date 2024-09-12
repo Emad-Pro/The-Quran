@@ -15,7 +15,7 @@ class IntroTitleWidget extends StatelessWidget {
           color: Theme.of(context).brightness == Brightness.light
               ? ColorsConst.pruble
               : Theme.of(context).colorScheme.onSurface,
-          fontSize: getResponsiveFontSize(context, fontSize: 40),
+          fontSize: getResponsiveFontSize(context, fontSize: 36),
           fontWeight: FontWeight.bold,
           fontFamily: LocalizationsService.locale.languageCode == 'ar'
               ? "amiri"

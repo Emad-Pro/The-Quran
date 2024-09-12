@@ -24,7 +24,9 @@ dependencies:
   equatable: 
   dio: 
   device_preview: 
-  path_provider: ^2.1.4
+  path_provider: 
+  bottom_bar_matu: 
+
 
 dev_dependencies:
   flutter_test:
@@ -52,3 +54,5 @@ flutter:
     - family: poppins
       fonts:
         - asset: assets/fonts/poppins/poppins.ttf
+        - asset: assets/fonts/poppins/poppins-bold.ttf
+          weight: 900  

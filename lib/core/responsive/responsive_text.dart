@@ -2,33 +2,34 @@ import 'package:flutter/widgets.dart';
 
 class SizeConfig {
   static const double desktop = 1200;
-  static const double tablet = 800;
+  static const double tablet = 650;
 
   static late double width, height;
 
-  static init(BuildContext context) {
-    height = MediaQuery.sizeOf(context).height;
-    width = MediaQuery.sizeOf(context).width;
+  static void init(BuildContext context) {
+    height = MediaQuery.of(context).size.height;
+    width = MediaQuery.of(context).size.width;
   }
 }
 
-double getResponsiveFontSize(context, {required double fontSize}) {
+double getResponsiveFontSize(BuildContext context, {required double fontSize}) {
   double scaleFactor = getScaleFactor(context);
   double responsiveFontSize = fontSize * scaleFactor;
 
-  double lowerLimit = fontSize * .8;
+  // قم بتحديد الحدود العليا والدنيا لتجنب أن يصبح الخط صغيرًا أو كبيرًا جدًا
+  double lowerLimit = fontSize * 0.8;
   double upperLimit = fontSize * 1.2;
 
   return responsiveFontSize.clamp(lowerLimit, upperLimit);
 }
 
-double getScaleFactor(context) {
-  double width = MediaQuery.sizeOf(context).width;
-  if (width < SizeConfig.tablet) {
-    return width / 550;
-  } else if (width < SizeConfig.desktop) {
-    return width / 1000;
+double getScaleFactor(BuildContext context) {
+  double width = MediaQuery.of(context).size.width;
+  if (width <= SizeConfig.tablet) {
+    return width / 375; // تحسين تجربة الأجهزة الصغيرة
+  } else if (width <= SizeConfig.desktop) {
+    return width / 768; // تحسين تجربة الأجهزة المتوسطة (التابلت)
   } else {
-    return width / 1920;
+    return width / 1440; // تحسين تجربة الأجهزة الكبيرة (الديسكتوب)
   }
 }

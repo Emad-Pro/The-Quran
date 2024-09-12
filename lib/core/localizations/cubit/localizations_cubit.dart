@@ -7,7 +7,7 @@ part 'localizations_state.dart';
 part 'localizations_cubit.freezed.dart';
 
 class LocalizationsCubit extends Cubit<LocalizationsState> {
-  LocalizationsCubit() : super(LocalizationsState.initial()) {}
+  LocalizationsCubit() : super(LocalizationsState.initial());
 
   Future<void> changeLocale(Locale locale) async {
     emit(state.copyWith(locale: locale));

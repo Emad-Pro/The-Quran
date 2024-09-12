@@ -40,11 +40,9 @@ class MyApp extends StatelessWidget {
           bloc: getIt<ThemeCubit>(),
           builder: (context, themeState) {
             return MaterialApp(
-              locale: Locale("en"),
-              supportedLocales: const [
-                Locale('en'),
-                Locale('ar'),
-              ],
+              debugShowCheckedModeBanner: false,
+              locale: const Locale("en"),
+              supportedLocales: const [Locale('en'), Locale('ar')],
               localizationsDelegates: const [
                 LocalizationsService.delegate,
                 GlobalMaterialLocalizations.delegate,
