@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:bottom_bar_matu/bottom_bar_item.dart';
-import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 
 import 'package:the_quran/app/quran/view/quran_screen.dart';

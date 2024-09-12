@@ -45,11 +45,32 @@ flutter:
     - assets/lang/en.json
     - assets/lang/ar.json
     - assets/images/svg/
+    - assets/json/suar/
+    - assets/json/quran_surahs/
+    - assets/json/juz_numbers/
+    - assets/json/hizb_number/
+    - assets/json/
 
   fonts:
     - family: amiri
       fonts:
         - asset: assets/fonts/amiri/amiri.ttf
+
+    - family: quran
+      fonts:
+        - asset: assets/fonts/quran_font.ttf
+    
+    - family: frame
+      fonts:
+        - asset: assets/fonts/frame.ttf
+
+    - family: surah_name
+      fonts:
+        - asset: assets/fonts/surah_name.ttf
+
+    - family: basmala
+      fonts:
+        - asset: assets/fonts/basmala.ttf
 
     - family: poppins
       fonts:
