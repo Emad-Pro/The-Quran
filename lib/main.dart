@@ -12,7 +12,7 @@ import 'package:the_quran/core/theme/cubit/theme_cubit.dart';
 import 'package:the_quran/core/theme/service/theme_service.dart';
 
 import 'app/intro/intro_screen.dart';
-import 'app/quran_page/data/quran_page_repo/quran_page_repo.dart';
+import 'core/public/repo_quran/quran_view_repo/quran_view_repo.dart';
 import 'core/get_it/service_locator.dart';
 import 'core/localizations/localizations_service.dart';
 
@@ -24,7 +24,7 @@ void main() async {
         : await getApplicationDocumentsDirectory(),
   );
   Bloc.observer = MyBlocObserver();
-  await QuranPageRepo().loadQuranData();
+  await QuranViewRepo().loadQuranData();
   ServiceLocator().init();
   runApp(DevicePreview(builder: (context) => const MyApp()));
 }
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
           builder: (context, themeState) {
             return MaterialApp(
               debugShowCheckedModeBanner: false,
-              locale: const Locale("en"),
+              locale: locale,
               supportedLocales: const [Locale('en'), Locale('ar')],
               localizationsDelegates: const [
                 LocalizationsService.delegate,
@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
               title: 'The Quran Kareem',
               darkTheme: ThemeService.darkTheme(locale),
               theme: ThemeService.lightTheme(locale),
-              themeMode: ThemeMode.light,
+              themeMode: ThemeService.themeApp(),
               home: const IntroScreen(),
             );
           },

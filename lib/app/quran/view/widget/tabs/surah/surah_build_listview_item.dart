@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_quran/core/const/colors.dart';
-import '../../../../../surah_view/view/ayat_view.dart';
+import '../../../../../quran_view/view/quran_book_view_screen.dart';
+
 import '../../../../../../core/responsive/responsive_text.dart';
 import '../../../../../../core/widget/custom_arabic_number_widget.dart';
 
@@ -12,15 +13,14 @@ class SurahBuildListViewItem extends StatelessWidget {
   final int? numberOfAyahs;
   final String? revelationType;
 
-  const SurahBuildListViewItem({
-    super.key,
-    this.number,
-    this.name,
-    this.englishName,
-    this.englishNameTranslation,
-    this.numberOfAyahs,
-    this.revelationType,
-  });
+  const SurahBuildListViewItem(
+      {super.key,
+      this.number,
+      this.name,
+      this.englishName,
+      this.englishNameTranslation,
+      this.numberOfAyahs,
+      this.revelationType});
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +29,10 @@ class SurahBuildListViewItem extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => AyatView(
-                      surahId: number!,
-                      surahName: name!,
+                builder: (context) => QuranBookViewScreen(
+                      id: number!,
+                      name: name!,
+                      isJuze: false,
                     )));
       },
       child: ListTile(

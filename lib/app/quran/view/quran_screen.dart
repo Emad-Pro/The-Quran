@@ -21,7 +21,7 @@ class QuranScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const QuranTitleAndSubtitleWidget(),
-            const QuranLastReadCardWidget(),
+             QuranLastReadCardWidget(state:state),
             HomeTabsBar(
               currenIndex: state.currenIndex,
             ),

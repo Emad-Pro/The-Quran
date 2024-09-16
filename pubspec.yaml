@@ -26,6 +26,8 @@ dependencies:
   device_preview: 
   path_provider: 
   bottom_bar_matu: 
+  share_plus: ^10.0.2
+  audioplayers: ^6.1.0
 
 
 dev_dependencies:
@@ -46,7 +48,6 @@ flutter:
     - assets/lang/ar.json
     - assets/images/svg/
     - assets/json/suar/
-    - assets/json/quran_surahs/
     - assets/json/juz_numbers/
     - assets/json/hizb_number/
     - assets/json/

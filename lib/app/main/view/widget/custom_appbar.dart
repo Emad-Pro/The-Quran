@@ -6,9 +6,11 @@ import '../../../../core/responsive/responsive_text.dart';
 import '../../../../core/widget/custom_svg_image.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key, this.title, this.leedingButton});
+  const CustomAppBar(
+      {super.key, this.title, this.leedingButton, this.actionButton});
   final String? title;
   final Widget? leedingButton;
+  final Widget? actionButton;
   @override
   Widget build(BuildContext context) {
     final isDarkModel =
@@ -19,7 +21,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: Row(children: [
         leedingButton ??
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Scaffold.of(context).openDrawer();
+                },
                 icon: CustomSvgImage(
                     path: "assets/images/svg/menu.svg", color: color)),
         const Spacer(),
@@ -45,6 +49,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           icon: CustomSvgImage(
               path: "assets/images/svg/search-line 1.svg", color: color),
         ),
+        actionButton ??
+            Container(
+              height: 0,
+            )
       ]),
     );
   }

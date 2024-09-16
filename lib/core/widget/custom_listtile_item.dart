@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../app/quran_page/view/quran_page_screen.dart';
+import '../../app/quran_view/view/quran_book_view_screen.dart';
 import '../const/colors.dart';
 import '../responsive/responsive_text.dart';
 import 'custom_arabic_number_widget.dart';
@@ -24,9 +24,10 @@ class CustomListTileItem extends StatelessWidget {
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => QuranPageScreen(
-                        juzeName: arName,
-                        juzzNumber: int.parse(number.toString()),
+                  builder: (context) => QuranBookViewScreen(
+                        isJuze: true,
+                        name: arName,
+                        id: int.parse(number.toString()),
                       )));
         },
         leading: CustomArabicNumberWidget(number: number),

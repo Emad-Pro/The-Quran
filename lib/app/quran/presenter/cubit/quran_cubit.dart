@@ -1,11 +1,10 @@
 import 'package:bloc/bloc.dart';
+import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:the_quran/app/quran/data/model/hizb_number_model/hizb_number_model/hizb_number_model.dart';
 import 'package:the_quran/app/quran/data/model/juze_number_model/juze_number_model/juze_number_model.dart';
-
 import 'package:the_quran/app/quran/data/model/surah_model/surah_model.dart';
-import 'package:the_quran/app/quran/view/widget/tabs/hizb_list.dart';
-
+import '../../../../core/bloc_cache/cache_service.dart';
 import '../../../../core/enum_state/request_state.dart';
 import '../../data/repo/hizb_repo.dart';
 import '../../data/repo/juze_repo.dart';
@@ -18,10 +17,12 @@ part 'quran_state.dart';
 class QuranCubit extends Cubit<QuranState> {
   QuranCubit(this._surahRepo, this._juzeRepo, this._hizbRepo)
       : super(QuranState()) {
+    loadLastReadingPosition();
     getSura();
     getJuze();
     getHizb();
   }
+
   final SurahRepo _surahRepo;
   final JuzeRepo _juzeRepo;
   final HizbRepo _hizbRepo;
@@ -75,5 +76,31 @@ class QuranCubit extends Cubit<QuranState> {
     } catch (e) {
       emit(state.copyWith(hizbState: RequestState.error));
     }
+  }
+
+  Future<void> loadLastReadingPosition() async {
+    final storageHelper = StorageHelper();
+    final lastSurah = await storageHelper.getData('last_surah') ?? 1;
+    final lastAyah = await storageHelper.getData('last_ayah') ?? 1;
+    final isJuze = await storageHelper.getData('isJuze') ?? false;
+    final lastJuze = await storageHelper.getData('lastJuze') ?? 1;
+    final lastPositionSaved = storageHelper.getData("scrollPosition") ?? 0;
+    emit(state.copyWith(
+        juzeId: lastJuze,
+        isJuze: isJuze,
+        lastAyah: lastAyah,
+        lastSurah: lastSurah,
+        lastPositionSaved: lastPositionSaved));
+  }
+
+  // حفظ الموضع الحالي
+  Future<void> saveLastReadingPosition(
+      int surah, int ayah, bool isJuze, int juzeId) async {
+    final storage = StorageHelper();
+    await storage.saveData('last_surah', surah);
+    await storage.saveData('last_ayah', ayah);
+    await storage.saveData('isJuze', isJuze);
+    await storage.saveData('lastJuze', juzeId);
+    await loadLastReadingPosition();
   }
 }
