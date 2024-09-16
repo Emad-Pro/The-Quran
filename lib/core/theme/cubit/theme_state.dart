@@ -1,7 +1,20 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 part of 'theme_cubit.dart';
 
-@freezed
-class ThemeState with _$ThemeState {
-  const factory ThemeState.light() = _LightTheme;
-  const factory ThemeState.dark() = _DarkTheme;
+class ThemeState extends Equatable {
+  final ThemeMode? themeMode;
+
+  ThemeState({this.themeMode = ThemeMode.light});
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => [themeMode];
+
+  ThemeState copyWith({
+    ThemeMode? themeMode,
+  }) {
+    return ThemeState(
+      themeMode: themeMode ?? this.themeMode,
+    );
+  }
 }

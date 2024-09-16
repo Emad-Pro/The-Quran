@@ -1,42 +1,33 @@
 import 'package:bloc/bloc.dart';
+import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../service/theme_service.dart';
 
 part 'theme_state.dart';
-part 'theme_cubit.freezed.dart';
 
 class ThemeCubit extends Cubit<ThemeState> {
-  ThemeCubit() : super(const ThemeState.light()) {
+  ThemeCubit() : super(ThemeState()) {
     _initializeTheme();
   }
 
   // Initialize theme by loading from ThemeService
   void _initializeTheme() async {
-    ThemeService.loadTheme();
-    final isDarkTheme =
-        ThemeService.isDarkTheme; // Assuming ThemeService has this property
-    if (isDarkTheme) {
-      emit(const ThemeState.dark());
-    } else {
-      emit(const ThemeState.light());
-    }
+    await ThemeService.loadTheme(); // Await the loadTheme to complete
+    final isDarkTheme = ThemeService.isDarkTheme;
+    emit(state.copyWith(
+      themeMode: isDarkTheme ? ThemeMode.dark : ThemeMode.light,
+    ));
   }
 
   // Toggle theme
   void toggleTheme() async {
-    if (state is _LightTheme) {
-      ThemeService.toggleTheme("dark");
-      emit(const ThemeState.dark());
+    if (state.themeMode == ThemeMode.light) {
+      await ThemeService.toggleTheme("dark"); // Await theme toggle
+      emit(state.copyWith(themeMode: ThemeMode.dark));
     } else {
-      ThemeService.toggleTheme("light");
-      emit(const ThemeState.light());
+      await ThemeService.toggleTheme("light"); // Await theme toggle
+      emit(state.copyWith(themeMode: ThemeMode.light));
     }
-  }
-
-  // Get ThemeData based on the current state
-  ThemeData get themeData {
-    return state is _LightTheme ? ThemeData.light() : ThemeData.dark();
   }
 }
