@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:bottom_bar_matu/bottom_bar_item.dart';
 import 'package:flutter/material.dart';
 
-import 'package:the_quran/app/quran/view/quran_screen.dart';
+import 'package:the_quran/app/quran_layout/quran/view/quran_screen.dart';
 import 'package:the_quran/core/widget/custom_svg_image.dart';
 
 import '../../../bookmarks/view/bookmarks_screen.dart';

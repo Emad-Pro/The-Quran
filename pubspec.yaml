@@ -26,19 +26,19 @@ dependencies:
   device_preview: 
   path_provider: 
   bottom_bar_matu: 
-  share_plus: ^10.0.2
-  audioplayers: ^6.1.0
-
+  share_plus:
+  audioplayers:
+  hive:
+  hive_flutter:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner:
   freezed:
-
+  hive_generator:
   json_serializable:
-
-  flutter_lints: ^4.0.0
+  flutter_lints:
 
 flutter:
 
