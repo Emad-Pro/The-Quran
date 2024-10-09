@@ -7,6 +7,7 @@ import 'package:the_quran/core/localizations/cubit/localizations_cubit.dart';
 import '../../../../../core/const/colors.dart';
 import '../../../../../core/get_it/service_locator.dart';
 import '../../../../../core/localizations/localizations_service.dart';
+import '../../../../../core/methods/convert_number_to_arabic.dart';
 import '../../../../../core/responsive/responsive_text.dart';
 import '../../../../../core/widget/custom_svg_image.dart';
 import '../../../last_read/last_read_screen.dart';
@@ -21,13 +22,19 @@ class QuranLastReadCardWidget extends StatelessWidget {
     final loadingState = (state.hiveLastReadingState == RequestState.loading ||
         state.surahState == RequestState.loading ||
         state.hizbState == RequestState.loading);
+    print(state.hiveLastReadingState);
+    print(state.surahState);
+    print(state.hizbState);
+
     final title = loadingState
         ? "Loading ...".tr(context)
-        : state.hiveReadingModel!.isJuze!
-            ? state.juzeNumberModel!
-                .quranJuze![state.hiveReadingModel!.lastJuze! - 1].name!
-            : state.surahModel!.data![state.hiveReadingModel!.lastSurah! - 1]
-                .name!;
+        : state.hiveReadingModel == null
+            ? "مرحباً بك \n ابدأ بترتيل القرأن لتسجيل تقدمك"
+            : state.hiveReadingModel!.isJuze!
+                ? state.juzeNumberModel!
+                    .quranJuze![state.hiveReadingModel!.lastJuze! - 1].name!
+                : state.surahModel!
+                    .data![state.hiveReadingModel!.lastSurah! - 1].name!;
     return BlocBuilder<LocalizationsCubit, LocalizationsState>(
       bloc: getIt<LocalizationsCubit>(),
       builder: (context, localeState) {
@@ -118,13 +125,29 @@ class QuranLastReadCardWidget extends StatelessWidget {
                                         fontFamily: "quran",
                                         color: ColorsConst.white),
                                   ),
-                                Text(
-                                  "${"Ayah No:".tr(context)} ${state.hiveReadingModel!.lastAyah!.toString()}",
-                                  style: TextStyle(
-                                      fontSize: getResponsiveFontSize(context,
-                                          fontSize: 14),
-                                      fontFamily: fontFamily,
-                                      color: ColorsConst.white),
+                                Row(
+                                  children: [
+                                    Text(
+                                      "Ayah No:".tr(context),
+                                      style: TextStyle(
+                                          fontSize: getResponsiveFontSize(
+                                              context,
+                                              fontSize: 14),
+                                          fontFamily: fontFamily,
+                                          color: ColorsConst.white),
+                                    ),
+                                    Text(
+                                      convertNumberToArabic(state
+                                          .hiveReadingModel!.lastAyah!
+                                          .toString()),
+                                      style: TextStyle(
+                                          fontSize: getResponsiveFontSize(
+                                              context,
+                                              fontSize: 14),
+                                          fontFamily: "amiri",
+                                          color: ColorsConst.white),
+                                    ),
+                                  ],
                                 ),
                               ],
                             );

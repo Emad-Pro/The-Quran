@@ -9,7 +9,6 @@ class QuranViewState extends Equatable {
   const QuranViewState({
     this.quranViewState = RequestState.loading,
     this.quranPageModel,
-
   });
 
   @override
@@ -18,13 +17,13 @@ class QuranViewState extends Equatable {
         quranPageModel,
       ];
 
-  QuranViewState copyWith(
-      {RequestState? quranViewState,
-      List<QuranViewModel>? quranPageModel,
-     }) {
+  QuranViewState copyWith({
+    RequestState? quranViewState,
+    List<QuranViewModel>? quranPageModel,
+  }) {
     return QuranViewState(
-        quranViewState: quranViewState ?? this.quranViewState,
-        quranPageModel: quranPageModel ?? this.quranPageModel,
-);
+      quranViewState: quranViewState ?? this.quranViewState,
+      quranPageModel: quranPageModel ?? this.quranPageModel,
+    );
   }
 }

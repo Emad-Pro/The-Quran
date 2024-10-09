@@ -17,7 +17,7 @@ class AudioPlayerViewSound extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cubit = getIt<AudioPlayerCubit>();
+     getIt<AudioPlayerCubit>();
     return Column(
       children: [
         Text(surahName,
@@ -31,7 +31,7 @@ class AudioPlayerViewSound extends StatelessWidget {
           value: state.position.inSeconds.toDouble(),
           max: state.duration.inSeconds.toDouble(),
           onChanged: (value) {
-            cubit.seek(Duration(seconds: value.toInt()));
+            //  cubit.seek(Duration(seconds: value.toInt()));
           },
         ),
         Row(

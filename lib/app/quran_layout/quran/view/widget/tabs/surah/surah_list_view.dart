@@ -10,11 +10,7 @@ class SurahListview extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
         children: state.surahModel!.data!
-            .map((toElement) => SurahBuildListViewItem(
-                number: toElement.number!,
-                name: toElement.name,
-                revelationType: toElement.revelationType,
-                englishName: toElement.englishName))
+            .map((toElement) => SurahBuildListViewItem(datum: toElement))
             .toList());
   }
 }

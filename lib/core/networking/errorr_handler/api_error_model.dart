@@ -27,7 +27,7 @@ class ApiErrorModel {
     final errorMessages = errors!.entries.map((entry) {
       final value = entry.value;
       if (value is List) {
-        return "${value.join(', ')}";
+        return value.join(', ');
       } else {
         return value.toString();
       }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_quran/app/quran_layout/quran_search/view/quran_search.dart';
 
 import '../../../../core/const/colors.dart';
 import '../../../../core/localizations/localizations_service.dart';
@@ -17,7 +18,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         Theme.of(context).colorScheme.brightness == Brightness.dark;
     final color = isDarkModel ? ColorsConst.grayDarkPink : ColorsConst.gray;
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(children: [
         leedingButton ??
             IconButton(
@@ -27,27 +28,28 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 icon: CustomSvgImage(
                     path: "assets/images/svg/menu.svg", color: color)),
         const Spacer(),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25.0),
-          child: Text(
-            title ?? "Quran Kareem".tr(context),
-            style: TextStyle(
-                color:
-                    Theme.of(context).colorScheme.brightness == Brightness.light
-                        ? ColorsConst.pruble
-                        : Colors.white,
-                fontFamily: LocalizationsService.locale.languageCode == 'ar'
-                    ? "quran"
-                    : "quran",
-                fontSize: getResponsiveFontSize(context, fontSize: 20),
-                fontWeight: FontWeight.bold),
-          ),
+        Text(
+          title ?? "Quran Kareem".tr(context),
+          style: TextStyle(
+              color:
+                  Theme.of(context).colorScheme.brightness == Brightness.light
+                      ? ColorsConst.pruble
+                      : Colors.white,
+              fontFamily: LocalizationsService.locale.languageCode == 'ar'
+                  ? "quran"
+                  : "quran",
+              fontSize: getResponsiveFontSize(context, fontSize: 20),
+              fontWeight: FontWeight.bold),
         ),
         const Spacer(),
         IconButton(
-          onPressed: () {},
-          icon: CustomSvgImage(
-              path: "assets/images/svg/search-line 1.svg", color: color),
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const QuranSearchScreen()));
+          },
+          icon: const Icon(Icons.search),
         ),
         actionButton ??
             Container(
@@ -58,5 +60,5 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size(double.infinity, 100);
+  Size get preferredSize => const Size(20, double.maxFinite);
 }

@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:bottom_bar_matu/bottom_bar_item.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +11,13 @@ import '../../../bookmarks/view/bookmarks_screen.dart';
 part 'main_state.dart';
 
 class MainCubit extends Cubit<MainState> {
-  MainCubit() : super(MainState());
+  MainCubit() : super(MainState(imageDrawer: "assets/images/svg/day.svg")) {
+    _updateImageBasedOnTime();
+    timer = Timer.periodic(const Duration(minutes: 1), (timer) {
+      _updateImageBasedOnTime();
+    });
+  }
+  Timer? timer;
   final pages = [
     const QuranScreen(),
     const Text("1"),
@@ -59,5 +66,14 @@ class MainCubit extends Cubit<MainState> {
   ];
   toggleNavBar(int newIndex) {
     emit(state.copyWith(selectedIndex: newIndex));
+  }
+
+  void _updateImageBasedOnTime() {
+    final int currentHour = DateTime.now().hour;
+    print(currentHour);
+    final String selectedImage = (currentHour >= 6 && currentHour < 18)
+        ? 'assets/images/svg/day.svg' // صورة الصباح
+        : 'assets/images/svg/night.svg'; // صورة المساء
+    emit(state.copyWith(imageDrawer: selectedImage));
   }
 }

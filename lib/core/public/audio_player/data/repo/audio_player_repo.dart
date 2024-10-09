@@ -9,7 +9,8 @@ class AudioPlayerRepo {
     try {
       final response = await Dio()
           .get("https://api.alquran.cloud/v1/ayah/$surahId:$ayahId/ar.alafasy");
-      return ApiResult.success(AudioUrlModel.fromJson(response.data));
+      return ApiResult<AudioUrlModel>.success(
+          AudioUrlModel.fromJson(response.data));
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }

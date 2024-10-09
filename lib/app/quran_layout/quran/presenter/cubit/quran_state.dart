@@ -10,16 +10,21 @@ class QuranState extends Equatable {
   final RequestState hizbState;
   final HiveReadingModel? hiveReadingModel;
   final RequestState hiveLastReadingState;
-  const QuranState(
-      {this.currenIndex = 0,
-      this.surahModel,
-      this.surahState = RequestState.loading,
-      this.juzeNumberModel,
-      this.juzeState = RequestState.loading,
-      this.hizbNumberModel,
-      this.hizbState = RequestState.loading,
-      this.hiveReadingModel,
-      this.hiveLastReadingState = RequestState.loading});
+  final ReadsModel? readsModel;
+  final RequestState readsState;
+  const QuranState({
+    this.currenIndex = 0,
+    this.surahModel,
+    this.surahState = RequestState.loading,
+    this.juzeNumberModel,
+    this.juzeState = RequestState.loading,
+    this.hizbNumberModel,
+    this.hizbState = RequestState.loading,
+    this.hiveReadingModel,
+    this.hiveLastReadingState = RequestState.loading,
+    this.readsModel,
+    this.readsState = RequestState.loading,
+  });
 
   QuranState copyWith(
       {int? currenIndex,
@@ -30,18 +35,22 @@ class QuranState extends Equatable {
       HizbNumberModel? hizbNumberModel,
       RequestState? hizbState,
       HiveReadingModel? hiveReadingModel,
-      RequestState? hiveLastReadingState}) {
+      RequestState? hiveLastReadingState,
+      ReadsModel? readsModel,
+      RequestState? readsState}) {
     return QuranState(
-        currenIndex: currenIndex ?? this.currenIndex,
-        surahState: surahState ?? this.surahState,
-        surahModel: surahModel ?? this.surahModel,
-        juzeNumberModel: juzeNumberModel ?? this.juzeNumberModel,
-        juzeState: juzeState ?? this.juzeState,
-        hizbNumberModel: hizbNumberModel ?? this.hizbNumberModel,
-        hizbState: hizbState ?? this.hizbState,
-        hiveReadingModel: hiveReadingModel ?? this.hiveReadingModel,
-        hiveLastReadingState:
-            hiveLastReadingState ?? this.hiveLastReadingState);
+      currenIndex: currenIndex ?? this.currenIndex,
+      surahState: surahState ?? this.surahState,
+      surahModel: surahModel ?? this.surahModel,
+      juzeNumberModel: juzeNumberModel ?? this.juzeNumberModel,
+      juzeState: juzeState ?? this.juzeState,
+      hizbNumberModel: hizbNumberModel ?? this.hizbNumberModel,
+      hizbState: hizbState ?? this.hizbState,
+      hiveReadingModel: hiveReadingModel ?? this.hiveReadingModel,
+      hiveLastReadingState: hiveLastReadingState ?? this.hiveLastReadingState,
+      readsModel: readsModel ?? this.readsModel,
+      readsState: readsState ?? this.readsState,
+    );
   }
 
   @override
@@ -55,7 +64,9 @@ class QuranState extends Equatable {
       hizbNumberModel,
       hizbState,
       hiveReadingModel,
-      hiveLastReadingState
+      hiveLastReadingState,
+      readsModel,
+      readsState
     ];
   }
 }

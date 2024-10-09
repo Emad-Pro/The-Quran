@@ -1,26 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:the_quran/core/const/colors.dart';
+import 'package:the_quran/core/localizations/localizations_service.dart';
 import '../../../../../quran_view/view/quran_book_view_screen.dart';
 
 import '../../../../../../../core/responsive/responsive_text.dart';
 import '../../../../../../../core/widget/custom_arabic_number_widget.dart';
+import '../../../../data/model/surah_model/datum.dart';
 
 class SurahBuildListViewItem extends StatelessWidget {
-  final int? number;
-  final String? name;
-  final String? englishName;
-  final String? englishNameTranslation;
-  final int? numberOfAyahs;
-  final String? revelationType;
-
-  const SurahBuildListViewItem(
-      {super.key,
-      this.number,
-      this.name,
-      this.englishName,
-      this.englishNameTranslation,
-      this.numberOfAyahs,
-      this.revelationType});
+  final Datum datum;
+  const SurahBuildListViewItem({super.key, required this.datum});
 
   @override
   Widget build(BuildContext context) {
@@ -30,15 +19,12 @@ class SurahBuildListViewItem extends StatelessWidget {
             context,
             MaterialPageRoute(
                 builder: (context) => QuranBookViewScreen(
-                      id: number!,
-                      name: name!,
-                      isJuze: false,
-                    )));
+                    id: datum.number!, name: datum.name!, isJuze: false)));
       },
       child: ListTile(
-        leading: CustomArabicNumberWidget(number: number!),
+        leading: CustomArabicNumberWidget(number: datum.number!),
         title: Text(
-          englishName!,
+          datum.englishName!,
           style: TextStyle(
             fontFamily: "Poppins",
             color: Theme.of(context).brightness == Brightness.dark
@@ -49,7 +35,7 @@ class SurahBuildListViewItem extends StatelessWidget {
           ),
         ),
         subtitle: Text(
-          revelationType!,
+          datum.revelationType!.tr(context),
           style: TextStyle(
             fontFamily: "Poppins",
             fontWeight: FontWeight.w500,
@@ -60,7 +46,7 @@ class SurahBuildListViewItem extends StatelessWidget {
           ),
         ),
         trailing: Text(
-          name!,
+          datum.name!,
           style: TextStyle(
             fontFamily: "amiri",
             fontWeight: FontWeight.bold,

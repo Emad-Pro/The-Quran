@@ -18,39 +18,28 @@ class AudioPlayerControllSound extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         IconButton(
-          icon: const Icon(Icons.replay_10),
+          icon: state.isPlaying
+              ? const Icon(Icons.pause)
+              : const Icon(Icons.play_arrow),
           onPressed: () {
-            final newPosition = state.position - const Duration(seconds: 10);
-            cubit.seek(
-                newPosition >= Duration.zero ? newPosition : Duration.zero);
-          },
-        ),
-        IconButton(
-          icon: Icon(state.isPlaying ? Icons.pause : Icons.play_arrow),
-          onPressed: () {
-            if (state.isPlaying) {
-              cubit.pause();
-            } else if (state.position == Duration.zero && !state.isPlaying) {
-              cubit.play(state.audioUrlModel!.data!.audio!);
-            } else {
-              cubit.resume();
-            }
-          },
-        ),
-        IconButton(
-          icon: const Icon(Icons.forward_10),
-          onPressed: () {
-            final newPosition = state.position + const Duration(seconds: 10);
-            if (newPosition <= state.duration) {
-              cubit.seek(newPosition);
-            }
+            state.isPlaying ? cubit.pause() : cubit.play();
           },
         ),
         IconButton(
           icon: const Icon(Icons.stop),
-          onPressed: () {
-            cubit.stop();
-          },
+          onPressed: cubit.stop,
+        ),
+        IconButton(
+          icon: const Icon(Icons.replay),
+          onPressed: cubit.restart,
+        ),
+        IconButton(
+          icon: const Icon(Icons.forward_10),
+          onPressed: cubit.seekForward,
+        ),
+        IconButton(
+          icon: const Icon(Icons.replay_10),
+          onPressed: cubit.seekBackward,
         ),
       ],
     );

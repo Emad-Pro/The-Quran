@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../bloc_cache/cache_service.dart';
+import '../../get_it/service_locator.dart';
+import '../../localizations/cubit/localizations_cubit.dart';
 
 class ThemeService {
   static const String _themeKey = 'theme_key';
@@ -23,10 +25,19 @@ class ThemeService {
 
   // جلب الثيم المناسب (مضيء أو مظلم)
   static ThemeData lightTheme(Locale locale) => ThemeData(
+        fontFamily:
+            getIt<LocalizationsCubit>().state.locale.languageCode == 'ar'
+                ? "changa"
+                : "",
         brightness: Brightness.light,
         drawerTheme: const DrawerThemeData(),
       );
 
-  static ThemeData darkTheme(Locale locale) =>
-      ThemeData(brightness: Brightness.dark);
+  static ThemeData darkTheme(Locale locale) => ThemeData(
+        brightness: Brightness.dark,
+        fontFamily:
+            getIt<LocalizationsCubit>().state.locale.languageCode == 'ar'
+                ? "changa"
+                : "",
+      );
 }

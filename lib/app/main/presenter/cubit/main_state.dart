@@ -3,14 +3,12 @@ part of 'main_cubit.dart';
 
 class MainState {
   final int selectedIndex;
+  final String imageDrawer;
+  MainState({this.selectedIndex = 0, this.imageDrawer = ''});
 
-  MainState({this.selectedIndex = 0});
-
-  MainState copyWith({
-    int? selectedIndex,
-  }) {
+  MainState copyWith({int? selectedIndex, String? imageDrawer}) {
     return MainState(
-      selectedIndex: selectedIndex ?? this.selectedIndex,
-    );
+        selectedIndex: selectedIndex ?? this.selectedIndex,
+        imageDrawer: imageDrawer ?? this.imageDrawer);
   }
 }

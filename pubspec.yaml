@@ -27,9 +27,13 @@ dependencies:
   path_provider: 
   bottom_bar_matu: 
   share_plus:
-  audioplayers:
+  just_audio:
   hive:
   hive_flutter:
+  animated_search_bar: ^2.7.2
+  audio_service: 
+  hijri: ^3.0.0
+
 
 dev_dependencies:
   flutter_test:
@@ -47,10 +51,13 @@ flutter:
     - assets/lang/en.json
     - assets/lang/ar.json
     - assets/images/svg/
+    - assets/images/png/
     - assets/json/suar/
     - assets/json/juz_numbers/
     - assets/json/hizb_number/
     - assets/json/
+    - assets/json/reads_list/
+    - assets/
 
   fonts:
     - family: amiri
@@ -72,6 +79,10 @@ flutter:
     - family: basmala
       fonts:
         - asset: assets/fonts/basmala.ttf
+    
+    - family: changa
+      fonts:
+        - asset: assets/fonts/changa.ttf
 
     - family: poppins
       fonts:

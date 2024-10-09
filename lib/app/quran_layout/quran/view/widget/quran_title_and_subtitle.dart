@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hijri/hijri_calendar.dart';
+import 'package:the_quran/app/quran_layout/quran/presenter/cubit/quran_cubit.dart';
+import 'package:the_quran/core/get_it/service_locator.dart';
 
 import '../../../../../core/const/colors.dart';
 import '../../../../../core/localizations/localizations_service.dart';
@@ -11,28 +14,24 @@ class QuranTitleAndSubtitleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final fontFamily =
-        LocalizationsService.locale.languageCode == 'ar' ? "amiri" : "poppins";
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Asslamualaikum",
+          "Peace be with you".tr(context),
           style: TextStyle(
-              fontFamily: fontFamily,
               fontSize: getResponsiveFontSize(context, fontSize: 20),
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.bold,fontFamily: "changa",
               color:
                   Theme.of(context).colorScheme.brightness == Brightness.light
                       ? ColorsConst.gray
                       : ColorsConst.grayDarkPink),
         ),
         Text(
-          "Emad Younis",
+          getIt<QuranCubit>().hijriDate,
+          textAlign: TextAlign.justify,
           style: TextStyle(
-              fontFamily: fontFamily,
-              fontSize: getResponsiveFontSize(context, fontSize: 24),
-              fontWeight: FontWeight.w600,
+              fontSize: getResponsiveFontSize(context, fontSize: 12),
               color:
                   Theme.of(context).colorScheme.brightness == Brightness.light
                       ? ColorsConst.darkDarkBlue

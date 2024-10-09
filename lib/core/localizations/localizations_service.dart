@@ -33,9 +33,10 @@ class LocalizationsService {
     LocalizationsService.locale = Locale(localeCode);
   }
 
-  static Future getLocaleCode() async {
+  static Future<Locale> getLocaleCode() async {
     final localeValue = await StorageHelper().getData('locale');
     locale = Locale(localeValue ?? 'en');
+    return locale;
   }
 }
 

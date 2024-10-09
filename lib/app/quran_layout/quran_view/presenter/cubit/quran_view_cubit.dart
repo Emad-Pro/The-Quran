@@ -3,7 +3,6 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:the_quran/core/public/repo_quran/quran_view_repo/quran_view_repo.dart';
 import 'package:the_quran/core/enum_state/request_state.dart';
-import '../../../../../core/bloc_cache/cache_service.dart';
 import '../../../../../core/public/repo_quran/model/quran_view_model/quran_view_model.dart';
 
 part 'quran_view_state.dart';

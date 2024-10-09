@@ -7,8 +7,18 @@
     "Surah :": "سورة :",
     "Ayah No:": " آيه رقم:",
     "Arabic": "العربية",
-    "language": "اللغة",
+    "Language": "اللغة",
     "English": "الانجليزية",
     "Surah": "السور",
-    "juz": "الاجزاء"
+    "juz": "الاجزاء",
+    "You can search for ayah": "يمكنك البحث عن آيه",
+    "Search for ayah": "البحث عن  آية",
+    "There are no searches yet": "لا يوجد عمليات بحث حتي الان",
+    "Peace be with you": "السلام عليكم",
+    "Welcome to the spaciousness of the Holy Qur’an, where faith is renewed and hearts are reassured. Let us begin our daily journey with God’s signs, light, and guidance.": "مرحبًا بك في رحاب القرآن الكريم، حيث يتجدد الإيمان وتطمئن القلوب. لنبدأ رحلتنا اليومية مع آيات الله، نورًا وهداية.",
+    "Medinan": "مدنية",
+    "Meccan": "مكية",
+    "Share": "مشاركة",
+    "Play": "تشغيل",
+    "Reads": "القراء"
 }

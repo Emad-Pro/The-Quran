@@ -16,14 +16,16 @@ class QuranScreen extends StatelessWidget {
     return BlocBuilder<QuranCubit, QuranState>(
       bloc: getIt<QuranCubit>(),
       builder: (context, state) {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            const QuranTitleAndSubtitleWidget(),
-            QuranLastReadCardWidget(state: state),
-            HomeTabsBar(
-              currenIndex: state.currenIndex,
+        return CustomScrollView(
+          slivers: [
+            const SliverToBoxAdapter(child: QuranTitleAndSubtitleWidget()),
+            SliverToBoxAdapter(child: QuranLastReadCardWidget(state: state)),
+            SliverFillRemaining(
+              fillOverscroll: true,
+              hasScrollBody: true,
+              child: HomeTabsBar(
+                currenIndex: state.currenIndex,
+              ),
             ),
           ],
         );
