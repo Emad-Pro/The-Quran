@@ -34,9 +34,10 @@ class AudioPlayerBottomSheet extends StatelessWidget {
                   AudioPlayerControllSound(state: state),
                 ],
               ),
-            ); // TODO: Handle this case.
+            );
           case RequestState.error:
-            return Text(state.audioUrlErrorMessage);
+            return Container(
+                height: 250, child: Text(state.audioUrlErrorMessage));
         }
       },
     );

@@ -128,9 +128,9 @@ class AudioPlayerCubit extends Cubit<AudioPlayerState> {
     final result = await _audioPlayerRepo.getAudioUrl(ayahId, surahId);
     result.when(
       success: (data) {
-        //  final AudioUrlModel audioUrlModel = data.data;
-        emit(state.copyWith(audioUrlState: RequestState.success));
-        // play(audioUrlModel.data!.audio!);
+        emit(state.copyWith(
+            audioUrlState: RequestState.success, audioUrlModel: data));
+        initPlay(data.data!.audio!);
       },
       failure: (ApiErrorModel apiErrorModel) {
         emit(state.copyWith(

@@ -22,7 +22,7 @@ class QuranBookViewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        title: name,
+        title: "القران الكريم",
         leedingButton: IconButton(
             onPressed: () {
               Navigator.pop(context);

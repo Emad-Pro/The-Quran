@@ -14,6 +14,7 @@ import 'quran_book_view_ayat_button_player_audio.dart';
 TextSpan quranBookViewAyatText(
     QuranViewModel toElement, BuildContext context, bool isJuze) {
   return TextSpan(
+    locale: const Locale("ar"),
     recognizer: TapGestureRecognizer()
       ..onTap = () {
         showModalBottomSheet(
@@ -66,6 +67,7 @@ TextSpan quranBookViewAyatText(
       fontFamily: "quran",
       color: Theme.of(context).colorScheme.onSurface,
       fontWeight: FontWeight.w500,
+      wordSpacing: 3,
       fontSize: getResponsiveFontSize(context, fontSize: 20),
       height: 2,
     ),

@@ -121,6 +121,30 @@ class QuranCubit extends Cubit<QuranState> {
     }
   }
 
+  String? getSurahNameByNumber(int surahNumber) {
+    // Check if the data is not null and contains elements
+    if (state.surahModel!.data != null) {
+      // Find the Datum object that matches the surah number
+      final surah = state.surahModel!.data!.firstWhere(
+        (datum) => datum.number == surahNumber,
+      );
+      return surah.name;
+    }
+    return null; // Return null if not found
+  }
+
+  String? getJuzeNameByNumber(int juzeNumber) {
+    // Check if the data is not null and contains elements
+    if (state.juzeNumberModel!.quranJuze != null) {
+      // Find the Datum object that matches the surah number
+      final juze = state.juzeNumberModel!.quranJuze!.firstWhere(
+        (datum) => datum.juzeNumber == juzeNumber,
+      );
+      return juze.name;
+    }
+    return null; // Return null if not found
+  }
+
   Future<void> saveLastReadingPosition(HiveReadingModel position) async {
     await HiveHelper().addReadingModel(position);
 

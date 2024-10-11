@@ -8,23 +8,26 @@ class QuranBookViewBasmlaText extends StatelessWidget {
   final QuranViewModel value;
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        width: double.infinity,
-        child: RichText(
-          textAlign: TextAlign.center,
-          text: TextSpan(
-            text: (value.suraNo != 9
-                ? "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ"
-                : ""), // اسم لسورةا
-            style: TextStyle(
-              fontFamily: "quran",
-              height: -2,
-              color: Theme.of(context).colorScheme.onSurface,
-              fontSize: getResponsiveFontSize(context, fontSize: 16),
-              fontWeight: FontWeight.bold, // لجعل اسم السورة بارزاً
-              // لضبط المسافة بين الأسطر
+    return Padding(
+      padding: const EdgeInsets.only(top: 45.0),
+      child: SizedBox(
+          width: double.infinity,
+          child: RichText(
+            textAlign: TextAlign.center,
+            text: TextSpan(
+              text: (value.suraNo != 9
+                  ? "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ"
+                  : ""), // اسم لسورةا
+              style: TextStyle(
+                fontFamily: "quran",
+                height: -2,
+                color: Theme.of(context).colorScheme.onSurface,
+                fontSize: getResponsiveFontSize(context, fontSize: 18),
+                fontWeight: FontWeight.w900, // لجعل اسم السورة بارزاً
+                // لضبط المسافة بين الأسطر
+              ),
             ),
-          ),
-        ));
+          )),
+    );
   }
 }
