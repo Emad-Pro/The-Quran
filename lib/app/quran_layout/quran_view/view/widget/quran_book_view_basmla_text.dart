@@ -9,18 +9,19 @@ class QuranBookViewBasmlaText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 45.0),
+      padding: const EdgeInsets.only(top: 30.0),
       child: SizedBox(
           width: double.infinity,
           child: RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
+              locale: Locale("ar"),
               text: (value.suraNo != 9
                   ? "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ"
                   : ""), // اسم لسورةا
               style: TextStyle(
                 fontFamily: "quran",
-                height: -2,
+                height: -1,
                 color: Theme.of(context).colorScheme.onSurface,
                 fontSize: getResponsiveFontSize(context, fontSize: 18),
                 fontWeight: FontWeight.w900, // لجعل اسم السورة بارزاً

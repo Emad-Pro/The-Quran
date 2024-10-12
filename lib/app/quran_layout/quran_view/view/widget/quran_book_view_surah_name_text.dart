@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../../core/const/colors.dart';
 import '../../../../../core/responsive/responsive_text.dart';
@@ -15,15 +16,26 @@ class QuranBookViewSurahNameText extends StatelessWidget {
         alignment: AlignmentDirectional.center,
         children: [
           SizedBox(
+            height: 55,
+            width: double.infinity,
+            child: FittedBox(
+                fit: BoxFit.fill,
+                child: SvgPicture.asset(
+                  "assets/images/svg/border_surah.svg",
+                  //        colorFilter: ColorFilter.mode(BlendMode.srcIn),
+                )),
+          ),
+          SizedBox(
             height: 90,
             child: Align(
               alignment: AlignmentDirectional.center,
               child: RichText(
                 textAlign: TextAlign.center,
                 text: TextSpan(
+                  locale: Locale("ar"),
                   text: "سُورَةُ ${value.suraNameAr}", // اسم السورة
                   style: TextStyle(
-                    height: 2.6,
+                    height: 1.5,
                     fontFamily: "quran",
                     color: Theme.of(context).colorScheme.onSurface,
                     fontSize: getResponsiveFontSize(context, fontSize: 18),
@@ -33,26 +45,7 @@ class QuranBookViewSurahNameText extends StatelessWidget {
                 ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 90,
-            width: double.infinity,
-            child: FittedBox(
-              fit: BoxFit.fill,
-              child: RichText(
-                textAlign: TextAlign.center,
-                text: const TextSpan(
-                  text: "${39}", // اسم السورة
-                  style: TextStyle(
-                    color: ColorsConst.pruble,
-                    fontFamily: "frame",
-                    fontWeight: FontWeight.w100, // لجعل اسم السورة بارزاً
-                    // لضبط المسافة بين الأسطر
-                  ),
-                ),
-              ),
-            ),
-          ),
+          )
         ],
       ),
     );

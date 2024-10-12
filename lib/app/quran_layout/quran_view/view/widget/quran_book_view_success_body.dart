@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_quran/app/quran_layout/quran/presenter/cubit/quran_cubit.dart';
 import 'package:the_quran/core/const/colors.dart';
-import 'package:the_quran/core/localizations/cubit/localizations_cubit.dart';
 import 'package:the_quran/core/localizations/localizations_service.dart';
 import 'package:the_quran/core/responsive/responsive_text.dart';
 
@@ -44,12 +43,13 @@ class QuranBookViewSuccessBody extends StatelessWidget {
                           children: state.quranPageModel!.map((toElement) {
                             if (toElement.ayaNo == 1) {
                               return TextSpan(
+                                locale: Locale("ar"),
+                                text: "\n",
                                 children: [
                                   WidgetSpan(
-                                      alignment: PlaceholderAlignment.top,
                                       child: QuranBookViewSurahNameText(
-                                        value: toElement,
-                                      )),
+                                    value: toElement,
+                                  )),
                                   WidgetSpan(
                                       child: QuranBookViewBasmlaText(
                                     value: toElement,
@@ -64,7 +64,7 @@ class QuranBookViewSuccessBody extends StatelessWidget {
                             }
                           }).toList(),
                         ),
-                        textAlign: TextAlign.center,
+                        textAlign: TextAlign.justify,
                         softWrap: true,
                         overflow: TextOverflow.visible,
                       ),

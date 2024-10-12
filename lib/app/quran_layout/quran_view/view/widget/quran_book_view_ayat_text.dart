@@ -66,7 +66,7 @@ TextSpan quranBookViewAyatText(
     style: TextStyle(
       fontFamily: "quran",
       color: Theme.of(context).colorScheme.onSurface,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w600,
       wordSpacing: 3,
       fontSize: getResponsiveFontSize(context, fontSize: 20),
       height: 2,
